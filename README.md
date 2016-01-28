@@ -65,3 +65,18 @@ Each File object contains the following structures.
 
 
 ```
+##### Example: Limiting files number in the list
+> The number of the files in the list could be limitted by specifaing the range in Json object.
+
+##### Request
+```sh
+POST  http://localhost:2880/api/v1/LIST/getFilesbyRange/public
+
+Content-Type: application/json
+Accept: application/json
+
+{
+    "access_token": ["ACCESS_TOKEN"],
+    "files": ["1", "50"]
+}
+
