@@ -5,7 +5,7 @@
 
 ##### Request
 ```sh
-POST  http://localhost:2880/api/v1/LIST/getFilesbyRange/public
+POST  http://localhost:2880/api/v1/LIST/files/public
 
 Content-Type: application/json
 Accept: application/json
