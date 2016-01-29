@@ -104,6 +104,7 @@ Accept: application/json
 > Move a folder or a file objects into a new directory.
 The destination path is specified in **destination** structure. 
 
+>Here's an example of how to call the REST API to move a file into the myNewFolder folder.
 
 ##### Request
 
@@ -124,7 +125,7 @@ Accept: application/json
 
 ##### Responce
 
-> "ok" is the operation was succesfull, error message otherwise
+> "ok" if the operation was succesfull, error message otherwise
 
 
 
