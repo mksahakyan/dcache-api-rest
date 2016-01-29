@@ -63,9 +63,10 @@ Each File object contains the following structures.
 ```
 ##### Example: Limiting files number in the list
 
-> The number of the files in the list could be limitted by specifaing the range in Json object.
+> The number of the files in the list could be limitted by specifaing the **range** structure.
 
 ##### Request
+
 ```sh
 
 POST  http://localhost:2880/api/v1/LIST/getFilesbyRange/public
@@ -75,26 +76,55 @@ Accept: application/json
 
 {
     "access_token": ["ACCESS_TOKEN"],
-    "files": ["1", "50"]
+    "range": ["1", "50"]
 }
 
 ```
 
 
-#### Display list of Files for a given folder
+#### Display specified files
 
 ##### Request
+
 ```sh
 
-POST  http://localhost:2880/api/v1/LIST/getFilesbyRange/public
+POST  http://localhost:2880/api/v1/LIST/files/public
 
 Content-Type: application/json
 Accept: application/json
 
 {
     "access_token": ["ACCESS_TOKEN"],
-    "files": ["1", "50"]
+    "files": ["testFile1", "testFile2"]
 }
 
 ```
+#### Move folder or file to new directory
+
+> Move a folder or a file objects into a new directory.
+The destination path is specified in **destination** structure. 
+
+
+##### Request
+
+```sh
+
+POST   http://localhost:2880/api/v1/LIST/move/public/testFile7
+
+
+Content-Type: application/json
+Accept: application/json
+
+{
+    "access_token": ["ACCESS_TOKEN"],
+    "destination": "public/myNewFolder" 
+}
+
+```
+
+##### Responce
+
+> "ok" is the operation was succesfull, error message otherwise
+
+
 
