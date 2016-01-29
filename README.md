@@ -80,3 +80,21 @@ Accept: application/json
     "files": ["1", "50"]
 }
 
+#### Display list of specifed Files for a given folder
+
+##### Request
+```sh
+POST  http://localhost:2880/api/v1/LIST/files/public
+
+Content-Type: application/json
+Accept: application/json
+
+{
+    "access_token": ["ACCESS_TOKEN"],
+    "files": ["testFile1", "testFile2", "testFile3"]
+}
+
+
+```
+
+
