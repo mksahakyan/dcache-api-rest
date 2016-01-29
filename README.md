@@ -80,3 +80,21 @@ Accept: application/json
 
 ```
 
+
+#### Display list of Files for a given folder
+
+##### Request
+```sh
+
+POST  http://localhost:2880/api/v1/LIST/getFilesbyRange/public
+
+Content-Type: application/json
+Accept: application/json
+
+{
+    "access_token": ["ACCESS_TOKEN"],
+    "files": ["1", "50"]
+}
+
+```
+
