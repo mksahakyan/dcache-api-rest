@@ -63,7 +63,7 @@ Each File object contains the following structures.
 ```
 ##### Example: Limiting files number in the list
 
-> The number of the files in the list could be limitted by specifaing the **range** structure.
+> The number of the files in the list could be limitted by specifaing the **range** structure in the request body.
 
 ##### Request
 
@@ -104,7 +104,7 @@ Accept: application/json
 > Move a folder or a file objects into a new directory.
 The destination path is specified in **destination** structure. 
 
->Here's an example of how to call the REST API to move a file into the myNewFolder folder.
+> Here's an example of how to call the REST API to move a file into the myNewFolder folder.
 
 ##### Request
 
@@ -127,5 +127,29 @@ Accept: application/json
 
 > "ok" if the operation was succesfull, error message otherwise
 
+#### Create new folder
+ 
+> To create a new folder we pass  the **name** attribute in the request body.
 
+
+> the following exaple show to call Rest Api to create new folder as child of a folder specified in the request URL.
+
+##### Request
+
+```sh
+
+POST    http://localhost:2880/api/v1/LIST/create/public/myNewFolder
+
+
+Content-Type: application/json
+Accept: application/json
+
+{
+    "access_token": ["ACCESS_TOKEN"],
+    "name": "myFolder4" 
+}
+
+```
+##### Responce
+> ok if the call was successful
 
