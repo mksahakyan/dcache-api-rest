@@ -15,7 +15,6 @@ Accept: application/json
     "files": []
 }
 
-
 ```
 #####Valid forlder paths
 */public, /public/myFolder1, /public/myFolder2/subFolder2, etc.
@@ -55,21 +54,20 @@ Each File object contains the following structures.
             "fileName": "testFile1",
             "path": "/public/testFile1"
         },
-        .
-        .
-        .
+      ....
        
     ]
 }
         
 
-
 ```
 ##### Example: Limiting files number in the list
+
 > The number of the files in the list could be limitted by specifaing the range in Json object.
 
 ##### Request
 ```sh
+
 POST  http://localhost:2880/api/v1/LIST/getFilesbyRange/public
 
 Content-Type: application/json
@@ -80,21 +78,5 @@ Accept: application/json
     "files": ["1", "50"]
 }
 
-#### Display list of specifed Files for a given folder
-
-##### Request
-```sh
-POST  http://localhost:2880/api/v1/LIST/files/public
-
-Content-Type: application/json
-Accept: application/json
-
-{
-    "access_token": ["ACCESS_TOKEN"],
-    "files": ["testFile1", "testFile2", "testFile3"]
-}
-
-
 ```
-
 
